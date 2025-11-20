@@ -1,6 +1,8 @@
 import express, { Request, Response } from "express";
 import path from "path";
 import { configDotenv } from "dotenv";
+import { streamText } from "ai";
+import { openai } from "@ai-sdk/openai";
 
 configDotenv({
   quiet: false,
@@ -16,8 +18,17 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-app.get("/api/generate", (req: Request, res: Response) => {
-  res.json({
-    poem: "Roses are red,<br/>Violets are blue,<br/>This is a sample poem,<br/>Just for you.",
+app.get("/api/generate", async (req: Request, res: Response) => {
+  //   (async () => {
+  const { textStream } = streamText({
+    model: openai("gpt-4o"),
+    prompt: `Please generate a poem that contains short lyric fragments of Daft Punk's songs. Put the fragments between <b></b> and also add line breaks as <br/> and don't put quotation marks between the fragments. Return the response in plain text.`,
   });
+
+  for await (const delta of textStream) {
+    res.write(delta);
+  }
+
+  res.end();
+  //   })();
 });

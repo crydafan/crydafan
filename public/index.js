@@ -1,10 +1,20 @@
 const poemElement = document.getElementById("poem");
 
-fetch("/api/generate")
-  .then((response) => response.json())
-  .then((data) => {
-    poemElement.innerHTML = data.poem;
-  })
-  .catch((error) => {
-    console.error("Error fetching poem:", error);
-  });
+async function streamPoem() {
+  const response = await fetch("/api/generate");
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+
+  let fullText = "";
+
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    const chunk = decoder.decode(value);
+    fullText += chunk;
+    poemElement.innerHTML = fullText;
+  }
+}
+
+streamPoem();
