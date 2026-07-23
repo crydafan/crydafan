@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Leonardo Estacio's GitHub Stats, Rank: B+</title>
-        <desc id="descId">Total Stars Earned: 12, Total Commits  (last year) : 1216, Total PRs: 82, Total Issues: 91, Contributed to (last year): 24</desc>
+        <title id="titleId">Leonardo's GitHub Stats, Rank: B+</title>
+        <desc id="descId">Total Stars Earned: 12, Total Commits  (last year) : 1217, Total PRs: 82, Total Issues: 91, Contributed to (last year): 24</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 98.3773691166697;
+        stroke-dashoffset: 98.37338655745457;
       }
     }
   
@@ -126,7 +126,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Leonardo Estacio's GitHub Stats</text>
+      >Leonardo's GitHub Stats</text>
     </g>
       </g>
     
