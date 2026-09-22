@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Leonardo Estacio's GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 17, Total Commits  (last year) : 1515, Total PRs: 97, Total Issues: 158, Contributed to (last year): 30</desc>
+        <desc id="descId">Total Stars Earned: 17, Total Commits  (last year) : 1516, Total PRs: 97, Total Issues: 158, Contributed to (last year): 30</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 85.94679929952817;
+        stroke-dashoffset: 85.94506097696592;
       }
     }
   
